@@ -1,3 +1,8 @@
+package tests;
+
+import model.GroupData;
+import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class GroupCreationTest extends TestBase {
@@ -5,10 +10,13 @@ public class GroupCreationTest extends TestBase {
   @Test
   public void groupCreationTest() {
     goToGroupsPage();
+    int before = wd.findElements(By.name("selected[]")).size();
     initGroupCreation();
-    fillGroupForm("group", "head", "foo");
+    fillGroupForm(new GroupData("group", "head", "foo"));
     submitGroupCreation();
     returnToGroupsPage();
+    int after = wd.findElements(By.name("selected[]")).size();
+    Assert.assertEquals(after, before+1);
 
   }
 
@@ -17,7 +25,7 @@ public class GroupCreationTest extends TestBase {
 
     goToGroupsPage();
     initGroupCreation();
-    fillGroupForm("group", "head", "foo");
+    fillGroupForm(new GroupData("group", "head", "foo"));
     submitGroupCreation();
     returnToGroupsPage();
 
@@ -28,7 +36,7 @@ public class GroupCreationTest extends TestBase {
 
     goToGroupsPage();
     initGroupCreation();
-    fillGroupForm("", "", "");
+    fillGroupForm(new GroupData("", "", ""));
     submitGroupCreation();
     returnToGroupsPage();
 
