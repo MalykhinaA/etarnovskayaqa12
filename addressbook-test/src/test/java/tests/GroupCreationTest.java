@@ -9,13 +9,13 @@ public class GroupCreationTest extends TestBase {
 
   @Test
   public void groupCreationTest() {
-    goToGroupsPage();
-    int before = wd.findElements(By.name("selected[]")).size();
-    initGroupCreation();
-    fillGroupForm(new GroupData("group", "head", "foo"));
-    submitGroupCreation();
-    returnToGroupsPage();
-    int after = wd.findElements(By.name("selected[]")).size();
+    app.goToGroupsPage();
+    int before = app.getGroupCount();
+    app.initGroupCreation();
+    app.fillGroupForm(new GroupData("group", "head", "foo"));
+    app.submitGroupCreation();
+    app.returnToGroupsPage();
+    int after = app.getGroupCount();
     Assert.assertEquals(after, before+1);
 
   }
@@ -23,22 +23,22 @@ public class GroupCreationTest extends TestBase {
   @Test
   public void GroupCreationTest1() {
 
-    goToGroupsPage();
-    initGroupCreation();
-    fillGroupForm(new GroupData("group", "head", "foo"));
-    submitGroupCreation();
-    returnToGroupsPage();
+    app.goToGroupsPage();
+    app.initGroupCreation();
+    app.fillGroupForm(new GroupData("group", "head", "foo"));
+    app.submitGroupCreation();
+    app.returnToGroupsPage();
 
   }
 
   @Test
   public void GroupCreationEmptyTest() {
 
-    goToGroupsPage();
-    initGroupCreation();
-    fillGroupForm(new GroupData("", "", ""));
-    submitGroupCreation();
-    returnToGroupsPage();
+    app.goToGroupsPage();
+    app.initGroupCreation();
+    app.fillGroupForm(new GroupData("", "", ""));
+    app.submitGroupCreation();
+    app.returnToGroupsPage();
 
   }
 
