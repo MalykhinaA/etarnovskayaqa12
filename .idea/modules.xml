@@ -5,6 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/addressbook-test.iml" filepath="$PROJECT_DIR$/.idea/modules/addressbook-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/addressbook-test_main.iml" filepath="$PROJECT_DIR$/.idea/modules/addressbook-test_main.iml" group="addressbook-test" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/addressbook-test_test.iml" filepath="$PROJECT_DIR$/.idea/modules/addressbook-test_test.iml" group="addressbook-test" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/etarnovskayaqa12-addressbook-test.iml" filepath="$PROJECT_DIR$/.idea/modules/etarnovskayaqa12-addressbook-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/etarnovskayaqa12-addressbook-test_main.iml" filepath="$PROJECT_DIR$/.idea/modules/etarnovskayaqa12-addressbook-test_main.iml" group="addressbook-test" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/etarnovskayaqa12-addressbook-test_test.iml" filepath="$PROJECT_DIR$/.idea/modules/etarnovskayaqa12-addressbook-test_test.iml" group="addressbook-test" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sandbox1.iml" filepath="$PROJECT_DIR$/.idea/modules/sandbox1.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sandbox1_main.iml" filepath="$PROJECT_DIR$/.idea/modules/sandbox1_main.iml" group="sandbox1" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sandbox1_test.iml" filepath="$PROJECT_DIR$/.idea/modules/sandbox1_test.iml" group="sandbox1" />
