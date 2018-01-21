@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeClass;
 public class TestBase {
 
   protected ApplicationManager app =
-          new ApplicationManager(BrowserType.IE);
+          new ApplicationManager(BrowserType.CHROME);
 
   @BeforeClass
   public void setUp() throws Exception {

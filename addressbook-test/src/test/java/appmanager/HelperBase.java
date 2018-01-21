@@ -1,6 +1,7 @@
 package appmanager;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -13,11 +14,21 @@ public class HelperBase {
 
   public void type(By locator, String text) {
     click(locator);
-    wd.findElement(locator).clear();
-    wd.findElement(locator).sendKeys(text);
+    if (text!= null){
+      wd.findElement(locator).clear();
+      wd.findElement(locator).sendKeys(text);
+    }
+  }
+  public boolean isElementPresent(By locator) {
+    try {
+      wd.findElement(locator);
+      return true;
+    } catch (NoSuchElementException ex) {
+      return false;
+    }
   }
 
-  public static boolean isAlertPresent(FirefoxDriver wd) {
+  public  boolean isAlertPresent(WebDriver wd) {
     return isAlertPresent(wd);
   }
 
