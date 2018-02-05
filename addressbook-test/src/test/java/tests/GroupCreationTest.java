@@ -11,7 +11,7 @@ public class GroupCreationTest extends TestBase {
     app.getNavigationHelper().goToGroupsPage();
     int before = app.getGroupHelper().getGroupCount();
     app.getGroupHelper().initGroupCreation();
-    app.getGroupHelper().fillGroupForm(new GroupData("group", null, "foo"));
+    app.getGroupHelper().fillGroupForm(new GroupData());
     app.getGroupHelper().submitGroupCreation();
     app.getGroupHelper().returnToGroupsPage();
     int after = app.getGroupHelper().getGroupCount();
@@ -21,10 +21,12 @@ public class GroupCreationTest extends TestBase {
 
   @Test(enabled = false)
   public void GroupCreationTest1() {
-
     app.getNavigationHelper().goToGroupsPage();
     app.getGroupHelper().initGroupCreation();
-    app.getGroupHelper().fillGroupForm(new GroupData("group", "head", "foo"));
+    app.getGroupHelper().fillGroupForm(new GroupData()
+            .withName("group")
+            .withHeader("head")
+            .withFooter("foo"));
     app.getGroupHelper().submitGroupCreation();
     app.getGroupHelper().returnToGroupsPage();
 
@@ -35,7 +37,7 @@ public class GroupCreationTest extends TestBase {
 
     app.getNavigationHelper().goToGroupsPage();
     app.getGroupHelper().initGroupCreation();
-    app.getGroupHelper().fillGroupForm(new GroupData("", "", ""));
+    app.getGroupHelper().fillGroupForm(new GroupData());
     app.getGroupHelper().submitGroupCreation();
     app.getGroupHelper().returnToGroupsPage();
 
